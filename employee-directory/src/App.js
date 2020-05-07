@@ -2,14 +2,14 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
-import Table from "./components/Table";
+import SearchResultContainer from "./components/SearchResultContainer";
 // import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
     <>
     {/* <SearchBar /> */}
-    <Table />
+    <SearchResultContainer />
     </>
     // <div className="App">
     //   <header className="App-header">

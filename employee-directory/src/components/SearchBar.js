@@ -6,11 +6,11 @@ function SearchBar(props) {
             <form>
                 <input
                     onChange={props.handleInputChange}
-                    value={props.search}
+                    value={props.value}
                     name="search"
                     type="text"
                     className="searchBox"
-                    placeHolder="Search for an employee"
+                    placeholder="Search for an employee"
                     id="search"        
 
                 />
