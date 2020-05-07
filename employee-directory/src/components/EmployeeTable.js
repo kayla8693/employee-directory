@@ -1,13 +1,25 @@
 import React from "react";
 import Moment from "react-moment";
 
+// const sortTypes = {
+//     up: {
+//         class: "sort-up",
+//         fn: (a, b) => a.name.last < b.name.last
+//     },
+//     down: {
+//         class: "sort-down",
+//         fn: (a, b) => a.name.last > b.name.last
+//     }
+// };
+
 function EmployeeTable(props) {
     return (
         <table>
             <thead>
                 <tr>
                     <th>Picture</th>
-                    <th>Name</th>
+                    <th>First Name</th>
+                    <th onClick={props.sortByLastName}><button>Last Name</button></th>
                     <th>Phone</th>
                     <th>Email</th>
                     <th>DOB</th>
@@ -19,7 +31,8 @@ function EmployeeTable(props) {
                         <td>
                             <img alt={employee.name.first + " " + employee.name.last} className="employeePic" src={employee.picture.medium} />
                         </td>
-                        <td>{employee.name.first + " " + employee.name.last}</td>
+                        <td>{employee.name.first}</td>
+                        <td>{employee.name.last}</td>
                         <td>{employee.phone}</td>
                         <td>{employee.email}</td>
                         <td><Moment format="MM/DD/YYYY">{employee.dob.date}</Moment></td>
@@ -29,18 +42,5 @@ function EmployeeTable(props) {
         </table>
     )
 }
-
-// function ResultList(props) {
-//     return (
-//       <ul className="list-group">
-//         {props.results.map(result => (
-//           <li className="list-group-item" key={result.id}>
-//             <img alt={result.title} className="img-fluid" src={result.images.original.url} />
-//           </li>
-//         ))}
-//       </ul>
-//     );
-//   }
-
 
 export default EmployeeTable;
