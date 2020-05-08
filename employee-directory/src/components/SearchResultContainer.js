@@ -31,10 +31,15 @@ class SearchResultContainer extends Component {
             [name]: value
         }, console.log("state", this.state));
 
-        let selectedEmployees = this.state.selectedEmployees;
+        const selectedEmployees = this.state.selectedEmployees;
 
-        let filteredEmployees = selectedEmployees.filter(employees => employees.name.last.toLowerCase().indexOf(value) > -1);
-        return filteredEmployees;
+        let filteredEmployees = selectedEmployees.filter(employees => employees.name.last.toLowerCase().indexOf(this.state.search) > -1);
+
+        this.setState({
+            selectedEmployees: filteredEmployees
+        })
+
+        // let newEmp = selectedEmployees.indexOf(value)
     };
 
 
@@ -47,21 +52,21 @@ class SearchResultContainer extends Component {
     // }
 
 
-    handleInputChange = event => {
-        this.setState({ search: event.target.value });
-      };
+    // handleInputChange = event => {
+    //     this.setState({ search: event.target.value });
+    //   };
     
-      handleFormSubmit = event => {
-        event.preventDefault();
-        API.getDogsOfBreed(this.state.search)
-          .then(res => {
-            if (res.data.status === "error") {
-              throw new Error(res.data.message);
-            }
-            this.setState({ results: res.data.message, error: "" });
-          })
-          .catch(err => this.setState({ error: err.message }));
-      };
+    //   handleFormSubmit = event => {
+    //     event.preventDefault();
+    //     API.getDogsOfBreed(this.state.search)
+    //       .then(res => {
+    //         if (res.data.status === "error") {
+    //           throw new Error(res.data.message);
+    //         }
+    //         this.setState({ results: res.data.message, error: "" });
+    //       })
+    //       .catch(err => this.setState({ error: err.message }));
+    //   };
 
 
 
