@@ -36,16 +36,16 @@ class SearchResultContainer extends Component {
         const selected = this.state.selectedEmployees;
 
         if (this.state.sortOrder === "asc") {
-            const sorted = selected.sort((a, b) => 
-            
-            (a.name.last.toLowerCase() > b.name.last.toLowerCase()) ? 1 : -1)
+            const sorted = selected.sort((a, b) =>
+
+                (a.name.last.toLowerCase() > b.name.last.toLowerCase()) ? 1 : -1)
 
             this.setState({
                 selectedEmployees: sorted,
                 sortOrder: "desc"
             })
-        } 
-        
+        }
+
         else {
             const sorted = selected.sort((a, b) => (a.name.last.toLowerCase() < b.name.last.toLowerCase()) ? 1 : -1)
 
@@ -55,7 +55,7 @@ class SearchResultContainer extends Component {
             })
         }
 
-    }
+    };
 
 
 

@@ -1,17 +1,6 @@
 import React from "react";
 import Moment from "react-moment";
 
-// const sortTypes = {
-//     up: {
-//         class: "sort-up",
-//         fn: (a, b) => a.name.last < b.name.last
-//     },
-//     down: {
-//         class: "sort-down",
-//         fn: (a, b) => a.name.last > b.name.last
-//     }
-// };
-
 function EmployeeTable(props) {
     return (
         <table>

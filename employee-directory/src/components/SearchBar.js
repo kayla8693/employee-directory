@@ -14,6 +14,7 @@ function SearchBar(props) {
                     id="search"        
 
                 />
+                <input type="submit" value="submit" />
             </form>
         </>
     )
