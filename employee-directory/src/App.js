@@ -2,7 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
-import Container from "./components/Container";
+import Wrapper from "./components/Wrapper";
 
 import SearchResultContainer from "./components/SearchResultContainer";
 // import SearchBar from "./components/SearchBar";
@@ -10,9 +10,9 @@ import SearchResultContainer from "./components/SearchResultContainer";
 function App() {
   return (
     <>
-      <Container>
+      <Wrapper>
         <SearchResultContainer />
-      </Container>
+      </Wrapper>
     </>
 
   );

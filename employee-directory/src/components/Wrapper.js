@@ -1,9 +1,9 @@
 import React from "react";
 
-function Container(props) {
+function Wrapper(props) {
     return (
         <div className="container">{props.children}</div>
     )
 };
 
-export default Container;
+export default Wrapper;

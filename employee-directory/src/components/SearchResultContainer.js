@@ -30,7 +30,41 @@ class SearchResultContainer extends Component {
         this.setState({
             [name]: value
         }, console.log("state", this.state));
+
+        let selectedEmployees = this.state.selectedEmployees;
+
+        let filteredEmployees = selectedEmployees.filter(employees => employees.name.last.toLowerCase().indexOf(value) > -1);
+        return filteredEmployees;
     };
+
+
+
+
+
+
+    // handleFilter = event => {
+    //     const 
+    // }
+
+
+    handleInputChange = event => {
+        this.setState({ search: event.target.value });
+      };
+    
+      handleFormSubmit = event => {
+        event.preventDefault();
+        API.getDogsOfBreed(this.state.search)
+          .then(res => {
+            if (res.data.status === "error") {
+              throw new Error(res.data.message);
+            }
+            this.setState({ results: res.data.message, error: "" });
+          })
+          .catch(err => this.setState({ error: err.message }));
+      };
+
+
+
 
     sortByLastName = () => {
         const selected = this.state.selectedEmployees;
@@ -59,6 +93,35 @@ class SearchResultContainer extends Component {
 
 
 
+    sortByFirstName = () => {
+        const selected = this.state.selectedEmployees;
+
+        if (this.state.sortOrder === "asc") {
+            const sorted = selected.sort((a, b) =>
+
+                (a.name.first.toLowerCase() > b.name.first.toLowerCase()) ? 1 : -1)
+
+            this.setState({
+                selectedEmployees: sorted,
+                sortOrder: "desc"
+            })
+        }
+
+        else {
+            const sorted = selected.sort((a, b) => (a.name.first.toLowerCase() < b.name.first.toLowerCase()) ? 1 : -1)
+
+            this.setState({
+                selectedEmployees: sorted,
+                sortOrder: "asc"
+            })
+        }
+
+    };
+
+
+
+
+
 
     render() {
         return (
@@ -71,6 +134,7 @@ class SearchResultContainer extends Component {
                     hello={this.state}
                     employees={this.state.selectedEmployees}
                     sortByLastName={this.sortByLastName}
+                    sortByFirstName={this.sortByFirstName}
                 />
 
             </>
