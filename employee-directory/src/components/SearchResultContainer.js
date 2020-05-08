@@ -24,16 +24,14 @@ class SearchResultContainer extends Component {
 
 
     handleInputChange = event => {
-        const value = event.target.value;
-        const name = event.target.name;
-
-        this.setState({
-            [name]: value
-        }, console.log("state", this.state));
-
+        let value = event.target.value;
         const selectedEmployees = this.state.selectedEmployees;
 
-        let filteredEmployees = selectedEmployees.filter(employees => employees.name.last.toLowerCase().indexOf(this.state.search) > -1);
+        let filteredEmployees = selectedEmployees.filter(employees => employees.name.last.toLowerCase().indexOf(value.toLowerCase()) > -1);
+
+        // this.setState({
+        //     search: value
+        // }, console.log("state", this.state));
 
         this.setState({
             selectedEmployees: filteredEmployees
@@ -136,7 +134,6 @@ class SearchResultContainer extends Component {
                     handleInputChange={this.handleInputChange}
                 />
                 <EmployeeTable
-                    hello={this.state}
                     employees={this.state.selectedEmployees}
                     sortByLastName={this.sortByLastName}
                     sortByFirstName={this.sortByFirstName}
