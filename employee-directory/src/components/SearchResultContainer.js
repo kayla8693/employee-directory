@@ -3,13 +3,10 @@ import API from "../utils/API";
 import EmployeeTable from "./EmployeeTable";
 import SearchBar from "./SearchBar";
 
-
-
 class SearchResultContainer extends Component {
     state = {
         employees: [],
         selectedEmployees: [],
-        search: "",
         sortOrder: ""
     };
 
@@ -22,52 +19,17 @@ class SearchResultContainer extends Component {
             .catch(err => console.log(err));
     };
 
-
     handleInputChange = event => {
         let value = event.target.value;
-        const selectedEmployees = this.state.selectedEmployees;
+        const employees = this.state.employees;
 
-        let filteredEmployees = selectedEmployees.filter(employees => employees.name.last.toLowerCase().indexOf(value.toLowerCase()) > -1);
-
-        // this.setState({
-        //     search: value
-        // }, console.log("state", this.state));
+        let selectedEmployees = employees.filter(employee => employee.name.last.toLowerCase().includes(value.toLowerCase()));
 
         this.setState({
-            selectedEmployees: filteredEmployees
-        })
-
-        // let newEmp = selectedEmployees.indexOf(value)
+            ...this.state,
+            selectedEmployees
+        }, console.log("state", this.state));
     };
-
-
-
-
-
-
-    // handleFilter = event => {
-    //     const 
-    // }
-
-
-    // handleInputChange = event => {
-    //     this.setState({ search: event.target.value });
-    //   };
-    
-    //   handleFormSubmit = event => {
-    //     event.preventDefault();
-    //     API.getDogsOfBreed(this.state.search)
-    //       .then(res => {
-    //         if (res.data.status === "error") {
-    //           throw new Error(res.data.message);
-    //         }
-    //         this.setState({ results: res.data.message, error: "" });
-    //       })
-    //       .catch(err => this.setState({ error: err.message }));
-    //   };
-
-
-
 
     sortByLastName = () => {
         const selected = this.state.selectedEmployees;
@@ -91,10 +53,7 @@ class SearchResultContainer extends Component {
                 sortOrder: "asc"
             })
         }
-
     };
-
-
 
     sortByFirstName = () => {
         const selected = this.state.selectedEmployees;
@@ -120,11 +79,6 @@ class SearchResultContainer extends Component {
         }
 
     };
-
-
-
-
-
 
     render() {
         return (
