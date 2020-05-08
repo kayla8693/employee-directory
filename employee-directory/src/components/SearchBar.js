@@ -9,8 +9,8 @@ function SearchBar(props) {
                     value={props.value}
                     name="search"
                     type="text"
-                    className="searchBox"
-                    placeholder="Search for an employee"
+                    className="searchBox form-control"
+                    placeholder="Search by last name"
                     id="search"        
 
                 />

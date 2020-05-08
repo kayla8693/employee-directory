@@ -37,21 +37,31 @@
   }
 }
 
-
 .navbar {
   height: 130px;
+  /* padding: 40px; */
 }
 
 .navbar-brand {
   text-align: center;
-  padding-left: 470px;
-  padding-bottom: 25px;
+  padding-left: 465px;
+  padding-bottom: 30px;
   font-size: 40px;
 }
 
+.container {
+  margin-bottom: 50px;
+}
+
 form {
-  padding-top: 10px;
-  padding-left: 470px;
+  padding-top: 20px;
+  margin-left: 470px;
+  width: 200px;
+}
+
+.searchBox {
+  padding-left: 30px;
+  padding-bottom: 10px;
 }
 
 tr {
@@ -60,13 +70,22 @@ tr {
 }
 
 td {
-  padding: 15px 40px 20px 40px;
+  padding: 15px 35px 20px 35px;
 }
 
+th {
+  padding: 15px 30px 20px 30px;
+}
+
+.thName {
+  padding: 15px 25px 15px 25px;
+}
 
 table tr:nth-child(odd) td{
   background-color: lightgrey;
 }
-/* table tr:nth-child(even){
-  background-color: #f7f4eb;
-} */
+
+table {
+  border-bottom: solid;
+  border-left: solid;
+}

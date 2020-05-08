@@ -6,9 +6,9 @@ function EmployeeTable(props) {
         <table>
             <thead>
                 <tr>
-                    <th>Picture</th>
-                    <th onClick={props.sortByFirstName}><button className="btn btn-primary">First Name</button></th>
-                    <th onClick={props.sortByLastName}><button>Last Name</button></th>
+                    <th>Photo</th>
+                    <th className="thName" onClick={props.sortByFirstName}><i class="material-icons">swap_vert</i>First Name</th>
+                    <th className="thName" onClick={props.sortByLastName}><i class="material-icons">swap_vert</i>Last Name</th>
                     <th>Phone</th>
                     <th>Email</th>
                     <th>DOB</th>
