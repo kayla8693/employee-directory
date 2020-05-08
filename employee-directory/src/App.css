@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+
+.navbar {
+  height: 130px;
+}
+
+.navbar-brand {
+  text-align: center;
+  padding-left: 470px;
+  padding-bottom: 25px;
+  font-size: 40px;
+}
+
+form {
+  padding-top: 10px;
+  padding-left: 470px;
+}
+
+tr {
+  height: 100px;
+  width: 100%;
+}
+
+td {
+  padding: 15px 40px 20px 40px;
+}
+
+
+table tr:nth-child(odd) td{
+  background-color: lightgrey;
+}
+/* table tr:nth-child(even){
+  background-color: #f7f4eb;
+} */

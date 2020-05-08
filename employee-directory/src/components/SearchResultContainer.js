@@ -83,7 +83,6 @@ class SearchResultContainer extends Component {
     render() {
         return (
             <>
-                <h2>Employee Directory</h2>
                 <SearchBar
                     handleInputChange={this.handleInputChange}
                 />
@@ -92,7 +91,6 @@ class SearchResultContainer extends Component {
                     sortByLastName={this.sortByLastName}
                     sortByFirstName={this.sortByFirstName}
                 />
-
             </>
         );
     }

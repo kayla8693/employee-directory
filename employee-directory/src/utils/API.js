@@ -6,6 +6,3 @@ export default {
         
     }
 };
-
-
-// firstName, lastName, email, yearBorn?, phone, department?
