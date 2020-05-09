@@ -14,8 +14,11 @@
     "react-moment": "^0.9.7",
     "react-scripts": "3.4.1"
   },
+  "homaepage": "http://kayla8693.github.io/employee-directory",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -34,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
