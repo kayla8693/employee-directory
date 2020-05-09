@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Employee Directory
+This application is an employee directory created with React and utilizing the Random User Generator API. Tha application's UI is broken up into multiple componenets. Upon page load, a user is presented with a list of 100 "employees". The user can sort the employees by first or last name, and can filter employees by last name. The application is reactive, updating state with every search letter entry, filtering out any employees who's last name does not match the search, and returning employees when search items are deleted.
 
-## Available Scripts
 
-In the project directory, you can run:
+User Story:
 
-### `npm start`
+As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of Contents
+1. [Technologies](#technologies)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Questions](#questions)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Technologies
+<p id="technologies"></p>
 
-### `npm test`
+- React
+- Random User Generator API
+- Bootstrap
+- React-moment
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
+<p id='usage'></p>
 
-### `npm run build`
+- Navigate to ________________
+- Press the "Last Name" or "First Name" buttons to sort employees in ascending or descending order
+- In the search box, enter in any combination of letters to see if any employees' last names match the query. 
+- For the filtered results, names including the search will are included, e.g. an employee with the last name "Martinez" will reamin in the table if "ine" is searched
+- Simply delete a search to retrieve all of the employees again
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## License
+<p id='license'></p>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<img alt='licenseBadge' src='https://img.shields.io/badge/License-MIT License-BLUE'>
+  
+- MIT License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
+<p id='contributing'></p>
 
-### `npm run eject`
+If you would like to contribute to this project you can:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Either fork or clone this repo (https://github.com/kayla8693/employee-directory)
+- Add any changes/upgrades you would like
+- Update the README with changes made, new technologies used, etc.
+- Create and submit a new pull request using https://github.com/kayla8693/employee-directory/compare
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Questions
+<p id='questions'></p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you have questions about this application, I can be contacted at :
+  
+kaylag044@gmail.com
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
