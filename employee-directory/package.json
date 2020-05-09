@@ -14,7 +14,7 @@
     "react-moment": "^0.9.7",
     "react-scripts": "3.4.1"
   },
-  "homaepage": "http://kayla8693.github.io/employee-directory",
+  "homepage": "http://kayla8693.github.io/employee-directory",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
