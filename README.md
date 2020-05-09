@@ -24,7 +24,7 @@ As a user, I want to be able to view my entire employee directory at once so tha
 ## Usage
 <p id='usage'></p>
 
-- Navigate to ________________
+- Navigate to https://kayla8693.github.io/employee-directory/
 - Press the "Last Name" or "First Name" buttons to sort employees in ascending or descending order
 - In the search box, enter in any combination of letters to see if any employees' last names match the query. 
 - For the filtered results, names including the search will are included, e.g. an employee with the last name "Martinez" will reamin in the table if "ine" is searched
