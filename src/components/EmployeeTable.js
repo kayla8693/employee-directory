@@ -7,8 +7,8 @@ function EmployeeTable(props) {
             <thead>
                 <tr>
                     <th>Photo</th>
-                    <th className="thName" onClick={props.sortByFirstName}><i class="material-icons">swap_vert</i>First Name</th>
-                    <th className="thName" onClick={props.sortByLastName}><i class="material-icons">swap_vert</i>Last Name</th>
+                    <th className="thName" onClick={props.sortByFirstName}><i className="material-icons">swap_vert</i>First Name</th>
+                    <th className="thName" onClick={props.sortByLastName}><i className="material-icons">swap_vert</i>Last Name</th>
                     <th>Phone</th>
                     <th>Email</th>
                     <th>DOB</th>
